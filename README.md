@@ -61,7 +61,7 @@ GitHub is an example of a git server that we can use to create, store, manage an
 via the website, as well as connect your local repos via HTTPS or SSH or even using the GitHub Desktop GUI. Some other
 examples of git servers include GitLab and BitBucket.
 
-## Distributed workflow - Local to remote
+## Distributed workflow - Existing Local to remote
 
 ![image](images/git_workflow_distributed.png)
 
@@ -72,5 +72,18 @@ and you may have to authenticate with a personal access token or SSH key.
 4. Create a main branch with `git branch -M main` that contains your work.
 5. Push the branch to the remote repo with `git push -u origin main`.
 
+![image](images/local_to_remote.png)
 
+## Distributed workflow - Remote to new local
 
+1. In a new directory, create a README.md file with `echo "# shiny-invention" >> README.md`
+2. Perform the basic workflow with `git init`, `git add README.md` and `git commit -m "first commit"` to convert your directory
+into a git repo with a file committed.
+
+![image](images/remote_to_local_1.png)
+
+3. Similarly to local to remote, create a main branch with `git branch -M main`
+4. Link the remote repo to your local repo with `git remote add origin <link to repo>`
+5. Again, push the branch to the remote repo with `git push -u origin main`.
+
+![image](images/remote_to_local_2.png)
